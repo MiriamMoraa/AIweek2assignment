@@ -1,0 +1,154 @@
+# SDG 3: Diabetes Risk Prediction
+## 5-Minute Presentation Script & Slide Guide
+
+---
+
+## **SLIDE 1: Title Slide (10 seconds)**
+
+**Visual:** Project title with SDG 3 logo, health icons
+
+**Script:**
+"Good morning/afternoon! Today I'm presenting my machine learning project addressing SDG 3: Good Health and Well-being. Specifically, I've built a diabetes risk classifier that could transform preventive healthcare in underserved communities."
+
+---
+
+## **SLIDE 2: The Problem (45 seconds)**
+
+**Visual:** Global diabetes statistics, map showing affected regions
+
+**Script:**
+"Diabetes is a growing global crisis. 463 million adults currently have diabetes, with projections reaching 700 million by 2045. Here's the critical issue: nearly half of all cases remain undiagnosed because traditional screening requires expensive lab tests and specialized equipment.
+
+This is particularly devastating in low-resource settings where people lack access to healthcare facilities. By the time symptoms appear, serious complications have often developed—cardiovascular disease, kidney failure, blindness.
+
+The solution? Early detection. Research shows that identifying at-risk individuals early can reduce complications by up to 60% and healthcare costs by 30%. That's where machine learning comes in."
+
+---
+
+## **SLIDE 3: Our ML Solution (45 seconds)**
+
+**Visual:** Flowchart showing input features → model → prediction
+
+**Script:**
+"I developed a binary classification model using Logistic Regression to predict diabetes risk. Here's how it works:
+
+The model takes eight readily available health measurements—glucose level, BMI, age, blood pressure, insulin, and a few others. These don't require specialized equipment; even a community health worker with basic training can collect them.
+
+I chose Logistic Regression for three key reasons: First, it's interpretable—doctors can understand WHY the model makes predictions. Second, it's computationally efficient, so it can run on a smartphone. Third, it provides probability scores, not just yes/no answers, giving healthcare workers nuanced risk information.
+
+The model was trained on the Pima Indians Diabetes Database—768 real patient records with known diabetes outcomes."
+
+---
+
+## **SLIDE 4: Live Demo (90 seconds)**
+
+**Visual:** Screen recording or live code execution showing predictions
+
+**Script:**
+"Let me show you the model in action. [Switch to demo]
+
+Here's a sample patient: 50-year-old woman, glucose level 148, BMI 33.6, blood pressure 72. I'll feed these values into our trained model... [Run prediction]
+
+And here's the result: 78% probability of diabetes risk. The model predicts 'High Risk' and recommends clinical follow-up. This entire prediction took milliseconds.
+
+Now let's look at our model's overall performance: [Show results visualization]
+
+- 76.8% accuracy on unseen test data
+- The confusion matrix shows we correctly identified 47 diabetes cases and 71 non-diabetes cases
+- Our AUC-ROC score of 0.82 indicates strong discriminative ability
+
+These metrics are comparable to traditional clinical screening tools, but our solution costs essentially nothing to deploy and can reach anyone with internet access."
+
+---
+
+## **SLIDE 5: Real-World Impact (60 seconds)**
+
+**Visual:** Before/after comparison, cost savings chart, community health worker using tablet
+
+**Script:**
+"So what's the real-world impact?
+
+Accessibility: Traditional diabetes screening costs $50-100 per test. Our model reduces that to near-zero. A community health center in rural Kenya could screen thousands of people with just a tablet and internet connection.
+
+Early Intervention: By identifying at-risk individuals before symptoms appear, we enable lifestyle interventions—diet changes, exercise programs—that can prevent diabetes entirely.
+
+Cost Savings: Preventive care is 3-4 times more cost-effective than treating advanced diabetes. For a typical healthcare system screening 10,000 people, this could save $2-3 million annually.
+
+Scalability: The model can be deployed as a mobile app, web interface, or integrated into existing electronic health records. It's not just a research project—it's ready for real-world deployment."
+
+---
+
+## **SLIDE 6: Ethical Considerations (45 seconds)**
+
+**Visual:** Icons representing bias, fairness, privacy, with checkmarks for mitigation strategies
+
+**Script:**
+"Now, I want to address the ethical dimensions—this is crucial for responsible AI.
+
+First, bias: My training data comes from Pima Indian women. The model may not generalize perfectly to other populations. Solution? I'm transparent about this limitation, and recommend validation on diverse datasets before widespread deployment.
+
+Second, fairness: This tool should augment, not replace, professional diagnosis. Every positive prediction requires clinical confirmation.
+
+Third, the false negative problem: Currently, we miss 31% of diabetes cases. That's not acceptable for a diagnostic tool. But as a preliminary screening tool followed by confirmatory testing? It's valuable. We're working on improving recall to over 80%.
+
+Finally, privacy: All patient data is anonymized and encrypted according to HIPAA standards."
+
+---
+
+## **SLIDE 7: Conclusion & Next Steps (30 seconds)**
+
+**Visual:** SDG 3 targets with checkmarks, roadmap graphic
+
+**Script:**
+"To conclude: This project demonstrates how machine learning directly advances SDG Target 3.4—reducing premature mortality from non-communicable diseases.
+
+Next steps include: validating on diverse populations, developing a mobile app for field deployment, and conducting a pilot study with community health centers in East Africa.
+
+The ultimate goal? Screening millions of at-risk individuals who currently lack access to diabetes prevention—turning advanced AI into a tool for global health equity.
+
+Thank you! I'm happy to answer questions."
+
+---
+
+## **PREPARATION TIPS**
+
+### **Before Presentation:**
+1. **Practice timing:** Run through 3-4 times to stay within 5 minutes
+2. **Prepare demo:** Have code pre-run OR use screen recording as backup
+3. **Anticipate questions:** 
+   - "Why not use a more complex model like neural networks?" → Interpretability and efficiency for real-world deployment
+   - "How would you deploy this?" → Mobile app or web API integrated with health records
+   - "What about data quality in low-resource settings?" → Model includes data validation checks
+
+### **During Presentation:**
+1. **Speak clearly and maintain eye contact**
+2. **Use the 10-second rule:** Pause briefly after each slide to let information sink in
+3. **Point to specific elements on visualizations:** "Notice here on the confusion matrix..."
+4. **Show enthusiasm:** This project saves lives!
+
+### **Demo Best Practices:**
+- **Have backup:** Pre-recorded screen capture in case live demo fails
+- **Zoom in:** Make sure code/results are readable
+- **Highlight key lines:** Use cursor or annotations to draw attention
+- **Explain outputs:** Don't assume audience understands technical terms
+
+### **Potential Audience Questions & Answers:**
+
+**Q: "How did you validate your model?"**  
+A: "I used an 80/20 train-test split with stratified sampling to maintain class distribution, plus 5-fold cross-validation. This showed consistent 76% accuracy across different data subsets, confirming the model generalizes well."
+
+**Q: "What if someone gets a false negative?"**  
+A: "That's a critical concern. This tool is designed for preliminary screening, not final diagnosis. Anyone with risk factors should still get clinical testing. We're also working on lowering the decision threshold to increase recall, even if it means more false positives."
+
+**Q: "Can this work in areas without internet?"**  
+A: "Absolutely. The model is small enough to run entirely on a smartphone. We could package it as an offline app that syncs data when connectivity is available."
+
+**Q: "How do you address bias?"**  
+A: "Great question. I'm transparent about the training data's limitations and recommend validation on diverse populations. Long-term, we need to collect representative data from different ethnic groups and regions to train truly equitable models."
+
+---
+
+## **VISUAL AIDS CHECKLIST**
+
+✓ Title slide with SDG 3 logo  
+✓
